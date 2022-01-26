@@ -86,7 +86,7 @@ async function handleRequest(request) {
   console.log(path)
   if(!path){
 
-    const html= await fetch("https://github.com/kobyalex/link-shortener/raw/main/index_orig.html")
+    const html= await fetch("https://cdn.jsdelivr.net/gh/51sec/Url-Shorten-By-CF-Worker@main/index.html")
 /****customized index.html at main branch, easier to edit it****/
     
     return new Response(await html.text(), {
