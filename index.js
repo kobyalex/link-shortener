@@ -71,10 +71,23 @@ async function handleRequest(request) {
 
   }
 
+  //Add this to you script
+  function runPassCheck(){
+    var password = prompt("Password Please");
+    //Change to your own Password
+    if(password != LOGIN_PASS){
+    document.body.innerHTML = '';
+    document.body.innerHTML = 'Password Failed! Reload to Renter Password';
+    }else{
+    alert('Success');
+    }
+  }
+
   const requestURL = new URL(request.url)
   const path = requestURL.pathname.split("/")[1]
   console.log(path)
   if(!path){
+    runPassCheck()
 
     const html= await fetch("https://github.com/kobyalex/link-shortener/raw/main/index.html")
     /****customized index.html at main branch, easier to edit it****/
