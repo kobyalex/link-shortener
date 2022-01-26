@@ -80,9 +80,7 @@ async function handleRequest(request) {
     /****customized index.html at main branch, easier to edit it****/
     
     return new Response(await html.text(), {
-    headers: {
-      "content-type": "text/html;charset=UTF-8",
-    },
+    headers: header
   })
   }
   const value = await LINKS.get(path)
